@@ -1,0 +1,28 @@
+{
+  "name": "sphido/url",
+  "keywords": ["url"],
+  "license": "BSD-3-Clause",
+  "homepage": "http://www.sphido.org",
+  "description": "Simple URL helper",
+  "authors": [
+    {
+      "name": "Roman Ožana",
+      "homepage": "http://www.omdesign.cz/",
+      "email": "ozana@omdesign.cz"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/sphido/url/issues"
+  },
+  "autoload": {
+    "files": [
+      "src/url.php"
+    ]
+  },
+  "require": {
+    "php": ">=5.5.6"
+  },
+  "require-dev": {
+    "nette/tester": "*"
+  }
+}
