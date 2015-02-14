@@ -3,7 +3,7 @@
   "keywords": ["url"],
   "license": "BSD-3-Clause",
   "homepage": "http://www.sphido.org",
-  "description": "Simple URL helper",
+  "description": "Simple and fast PHP library to parse and manipulate with URLs.",
   "authors": [
     {
       "name": "Roman Ožana",
