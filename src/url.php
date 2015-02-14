@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @method Url scheme(string $scheme)
  * @method Url host(string $host)

@@ -15,7 +15,7 @@ echo $url; // will made string URL
 
 // or 
 
-echo Url::current('/some/path');
+echo Url::current('/some/path'); // change current URL with path 
 ```
 Create URL instance from URL instance:
 
