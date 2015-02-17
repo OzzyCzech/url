@@ -1,5 +1,9 @@
 <?php
 /**
+ * @author Roman Ozana <ozana@omdesign.cz>
+ */
+
+/**
  * @method Url scheme(string $scheme)
  * @method Url host(string $host)
  * @method Url port(int $port)
@@ -7,7 +11,6 @@
  * @method Url pass(string $pass)
  * @method Url query(array $query)
  * @method Url fragment(string $fragment)
- * @author Roman Ozana <ozana@omdesign.cz>
  */
 class Url {
 
@@ -67,7 +70,9 @@ class Url {
 	function __toString() {
 		return
 			($this->scheme ? $this->scheme . ':' : '') . '//' .
-			($this->user !== '' ? rawurlencode($this->user) . ($this->pass === '' ? '' : ':' . rawurlencode($this->pass)) . '@' : '') .
+			($this->user !== '' ? rawurlencode($this->user) . ($this->pass === '' ? '' : ':' . rawurlencode(
+						$this->pass
+					)) . '@' : '') .
 			($this->host) .
 			($this->port && (!isset(self::$ports[$this->scheme]) || $this->port !== self::$ports[$this->scheme]) ? ':' . $this->port : '') .
 			($this->path) .
@@ -77,7 +82,7 @@ class Url {
 }
 
 /**
- * Return current URL with params.
+ * Return current URL with get query.
  *
  * @param  null|string $slug
  * @param array $query
