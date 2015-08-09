@@ -54,7 +54,7 @@ class Url {
 	public static function current($uri = null) {
 		$url = new Url($uri === null && isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : $uri);
 		$url->scheme = (isset($_SERVER['HTTPS']) && strcasecmp($_SERVER['HTTPS'], 'off') ? 'https' : 'http');
-		$url->host = (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : ''));
+		$url->host = preg_replace('#:\d+$#', '', (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '')));
 		$url->port = isset($_SERVER['SERVER_PORT']) ? intval($_SERVER['SERVER_PORT']) : null;
 		return $url;
 	}

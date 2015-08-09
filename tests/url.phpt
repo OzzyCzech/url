@@ -49,6 +49,13 @@ require __DIR__ . '/../vendor/autoload.php';
 	Assert::same($url->pass, 'password');
 }
 
+{ // port in HTTP_HOST
+	$_SERVER['REQUEST_URI'] = '/path/to';
+	$_SERVER['HTTP_HOST'] = 'SERVER:80808080880';
+	$_SERVER['HTTPS'] = 'on';
+	Assert::same('https://SERVER/path/to', strval(Url::current()));
+}
+
 { // default ports
 	$url = new Url('ftp://sphido.org:21');
 	Assert::same($url->port, 21);
