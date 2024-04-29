@@ -1,7 +1,5 @@
 # Sphido / URL
 
-[![Build Status](https://travis-ci.org/sphido/url.svg?branch=master)](https://travis-ci.org/sphido/url) [![Latest Stable Version](https://poser.pugx.org/sphido/url/v/stable.svg)](https://packagist.org/packages/sphido/url) [![Total Downloads](https://poser.pugx.org/sphido/url/downloads.svg)](https://packagist.org/packages/sphido/url) [![Latest Unstable Version](https://poser.pugx.org/sphido/url/v/unstable.svg)](https://packagist.org/packages/sphido/url) [![License](https://poser.pugx.org/sphido/url/license.svg)](https://packagist.org/packages/sphido/url)
-
 Simple and fast PHP library to parse and manipulate with URLs.
 
 ## Work with URL object
